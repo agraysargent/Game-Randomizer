@@ -1,1 +1,1 @@
-# Steam-Randomizer
+# Game-Randomizer
