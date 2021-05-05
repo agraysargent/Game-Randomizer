@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link rel="shortcut icon" type="image/jpg" href="./assets/images/joystick-tab-icon.png"/>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/images/joystick-tab-icon.png"
+    />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link
@@ -9,57 +13,50 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Steam Roulette</title>
   </head>
   <body>
-
-    <nav class="nav-extended">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
+    <div class="nav-wrapper navbar-fixed">
+      <nav class=" nav-wrapper brand-logo center teal lighten-2 center">
+        <!-- <a href="#" class="brand-logo">Welcome to Steam Roulette!</a>-->
+        <a class='brand-logo center'> Welcome to Steam Roulette!</a>
+      </nav>
+  </div>
+    <div class="container center-align">
+      <!-- <img
+        class="materialboxed"
+        width="650"
+        src="http://placehold.jp/650x650.png"
+      /> -->
+      <img class="responsive-img" width='650' src="http://placehold.jp/650x650.png">
+      <br>
+      <a class="waves-effect waves-light btn center-align pink darken-4">Spin the Wheel!</a>
+      <br>
+      <h3>Rating:<span class = 'rating'></span></h3>
+      <br>
+      <a href='#' class="waves-effect waves-light btn center-align link indigo darken-4">Take me to RAWG</a>
+      <br>
+      <a class="waves-effect waves-light btn center-align link teal darken-4">Take me to GiantBomb</a>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-content center-align teal lighten-2">
+        <span class="white-text text-darken-2">
+        <h4>Welcome to Steam Roulette!</h4>
+        <p>Are you 18 years or older?</p>
+      </span>
       </div>
-      <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-          <li class="tab"><a href="#test1">Test 1</a></li>
-          <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-          <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-          <li class="tab"><a href="#test4">Test 4</a></li>
-        </ul>
-      </div>
-    </nav>
-  
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
-  
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
-
-  <footer>
-  <footer class="page-footer">
-      <div class="row">
-        <div class="col l6 s12">
-        </div>
+      <div class="modal-footer teal lighten-2">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat center-align"><span class="white-text text-darken-2">Yes!</span></a>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      © 2021 Copyright
-  </footer>
+    <footer class="page-footer teal lighten-2">
+      <div class="footer-copyright teal lighten-2">
+        <div class="container center-align teal lighten-2">
+        © 2021 Copyright Text
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
