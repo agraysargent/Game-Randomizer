@@ -1,12 +1,27 @@
+* {
+  color: #66c0f4
+}
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #2a475e;
   }
-  
+
   main {
     flex: 1 0 auto;
   }
+/* .brand-title{
+  color: #66c0f4;
+} */
+
+.link {
+  color: #66c0f4;
+  margin-bottom: 20px;
+}
+  /* img {
+
+  } */
   /* footer {
     position: fixed;
     bottom:0;
@@ -20,7 +35,7 @@ body {
     position: absolute;
     overflow: hidden;
     } */
-  
+
   /* media query section from materialize, need to add further specificity */
   /* @media #{$small-and-down} {
       // styles for small screens and down
@@ -37,4 +52,3 @@ body {
     @media #{$extra-large-and-up} {
       // styles for extra large screens and up
     } */
-  
