@@ -3,19 +3,20 @@ var steamkey = "?key=DC78978E4183C8ACDC9229DD302B8145";
 
 function randomGame() {
   var rID = Math.floor(Math.random() * 400000);
-  var steamID = "";
+  var steamId = "";
   console.log(rID);
   $.getJSON("https://api.rawg.io/api/games/" + rID + rawgKey, function (data) {
     var image = data.background_image;
+    console.log(data.background_image);
     var name = data.name;
-    console.log(data);
     console.log(data.name);
+    console.log(data);
+    console.log(data.slug);
+    $("#gameImage").attr("src", image);
+    $("#gameTitle").text(name);
     var steamCheck = data.stores.filter((s) => s.store.id === 1);
     if (steamCheck == false) return randomGame();
-    fetch(
-      "https://api.rawg.io/api/games/" + data.slug + "/stores" + rawgKey
-      //"https://api.rawg.io/api/games/destiny-2/stores?key=ab34eb6425c34266b46d782f5d28a27e"
-    )
+    fetch("https://api.rawg.io/api/games/" + data.slug + "/stores" + rawgKey)
       .then((res) => res.json())
       .then((steamData) => {
         if (steamData.detail === "Not found.") return randomGame();
@@ -28,19 +29,19 @@ function randomGame() {
         steamId = steamCheck[0].id;
         console.log(steamId);
 
-        fetch(
-          "https://api.allorigins.win/get?url=http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?key=DC78978E4183C8ACDC9229DD302B8145&appid=" + steamID + "&count=3&maxlength=300&format=json")
-          .then((res) => res.json())
-          .then((newsResponse) => {
+        $.getJSON(
+          "https://api.allorigins.win/get?url=https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=" +
+            steamId +
+            "&count=3",
+          function (newsResponse) {
             console.log(newsResponse);
-          });
+          }
+        );
       });
   }).fail(function (data) {
     if (data.status === 404) {
       return randomGame();
     }
-    $("#gameImage").attr("src", image);
-    $("#gameTitle").text(name);
     return image;
   });
 }
