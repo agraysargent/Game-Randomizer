@@ -1,6 +1,7 @@
 var rawgKey = "?key=ab34eb6425c34266b46d782f5d28a27e";
 var gbKey = "?api_key=4991f7401be8b9b6a9f4364ca3a8a5fb859169db";
 
+
 function randomGame() {
   var rID = Math.floor(Math.random() * 400000);
   console.log(rID);
@@ -102,7 +103,11 @@ $("#randomButton").on("click", function () {
     console.log(data);
   });
 });
-
+//added local storage event
+$('.storage').on('click', function (event){
+  event.preventDefault();
+  localStorage.setItem('Adult?', true);
+});
 randomGame();
 // pullGB();
 authenticate();
