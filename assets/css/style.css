@@ -1,54 +1,56 @@
 * {
-  color: #66c0f4
+  color: #66c0f4;
 }
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background-color: #2a475e;
+    font-size: 3em;
   }
 
-  main {
-    flex: 1 0 auto;
-  }
-/* .brand-title{
-  color: #66c0f4;
-} */
+a {
+  font-size: 3em;
+  size: 150%;
+}
 
 .link {
   color: #66c0f4;
   margin-bottom: 20px;
 }
-  /* img {
-
-  } */
-  /* footer {
-    position: fixed;
+#container {
+  flex: 1 1 auto;  /*grow vertically*/
+}
+  footer {
+    position: relative;
     bottom:0;
     left:0;
     width:100%;
-  } */
-  /* html {
-    width: 100vw;
-    height: 100vh;
-    clip: auto;
-    position: absolute;
-    overflow: hidden;
-    } */
+    
+  }
+span {
+  color: #66c0f4;
+}
+.hyperlink {
+  font-size: 2.5em;
+}
+
 
   /* media query section from materialize, need to add further specificity */
-  /* @media #{$small-and-down} {
-      // styles for small screens and down
+
+  @media screen and (min-device-width: 769px) { 
+    .link {
+        margin-bottom: 5px;
+      }
+    footer {
+      position: fixed;
+      font-size: 2em;
     }
-    @media #{$medium-and-up} {
-      // styles for medium screens and larger
+    body {
+      font-size: 1em;
     }
-    @media #{$medium-and-down} {
-      // styles for medium screens and down
+    .hyperlink {
+      font-size: 1em;
     }
-    @media #{$large-and-up} {
-      // styles for large screens and up
+    
     }
-    @media #{$extra-large-and-up} {
-      // styles for extra large screens and up
-    } */
