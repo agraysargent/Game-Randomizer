@@ -108,7 +108,6 @@ $('.storage').on('click', function (event){
   event.preventDefault();
   localStorage.setItem('Adult?', true);
 });
-
 randomGame();
 // pullGB();
 authenticate();
