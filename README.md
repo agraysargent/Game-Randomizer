@@ -17,6 +17,7 @@ A randomizer is any piece of software or hardware that can produce random number
 Angelica Sargent, James O'Keefe, Mark Andersen, & Scott Core
 
 # Screenshot
+
 ![Screenshot](./assets/images/Screenshot1.png) 
 
 # Link
