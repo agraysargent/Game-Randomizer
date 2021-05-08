@@ -1,6 +1,7 @@
 var rawgKey = "?key=ab34eb6425c34266b46d782f5d28a27e";
 var steamkey = "?key=DC78978E4183C8ACDC9229DD302B8145";
 
+
 function randomGame() {
   var rID = Math.floor(Math.random() * 400000);
   var steamId = "";
@@ -59,5 +60,9 @@ $("#randomButton").on("click", function () {
     console.log(data);
   });
 });
-
+//added local storage event
+$('.storage').on('click', function (event){
+  event.preventDefault();
+  localStorage.setItem('Adult?', true);
+});
 randomGame();
